@@ -1,0 +1,31 @@
+.container {
+    width: 100%;
+    background: #0277BD;
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.title {
+    background: #CCB70F;
+    width: 100%;
+    padding: 2px;
+}
+
+.authorWrapper {
+    position: relative;
+    padding-right: 40px;
+}
+
+.authorWrapper svg {
+    position: absolute;
+    right: 2px;
+    top: -2px;
+}
+
+
+.author {
+    background: #CCB70F;
+    width: 100%;
+    margin-top: 10px;
+    padding: 2px;
+}
