@@ -1,14 +1,31 @@
 .container {
     width: 100%;
     background: #0277BD;
-    border: 1px solid red;
     padding: 10px;
+    margin: 10px 0;
+
+}
+
+.loadingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 600px;
+    min-height: 70px;
+    background: #0277BD;
+    padding: 10px;
+    margin: 10px 0;
 }
 
 .title {
     background: #CCB70F;
-    width: 100%;
+    width: 600px;
     padding: 2px;
+    /*ellipsis*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .authorWrapper {
