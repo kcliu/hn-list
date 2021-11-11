@@ -10,7 +10,7 @@ interface Story {
 }
 
 export const HnItem = ({storyId}: { storyId: number }) => {
-    const [isLoading, setLoading] = useState(false)
+    const [isLoading, setLoading] = useState<boolean>(false)
     const [story, setStory] = useState<Story | undefined>(undefined)
 
     useEffect(() => {
@@ -21,7 +21,7 @@ export const HnItem = ({storyId}: { storyId: number }) => {
                 setLoading(false)
                 setStory(res)
             })
-    }, [setStory])
+    }, [])
 
     if (isLoading) {
         return (

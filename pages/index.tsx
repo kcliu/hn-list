@@ -6,12 +6,12 @@ import {HnItem} from "../components/HnItem/HnItem";
 import {useEffect, useState} from "react";
 
 const Home: NextPage = () => {
-    const [storyIds, setStoryIds] = useState([])
+    const [storyIds, setStoryIds] = useState<number[]>([])
     useEffect(() => {
             fetch(`https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty`, {method: "GET"}).then(res => res.json()).then(res => {
                 setStoryIds(res.slice(0, 100))
             })
-        }, [setStoryIds]
+        }, []
     )
     return (
         <div className={styles.container}>
@@ -26,7 +26,6 @@ const Home: NextPage = () => {
                     Hacker News List
                 </h1>
                 <div>
-
                     {
                         storyIds.map((id, i) => {
                             return <HnItem key={i} storyId={id}/>
